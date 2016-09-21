@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="pchauvetonherokuApp.planetary_system.detail.title">Planetary System</span> {{vm.planetary_system.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pchauvetonherokuApp.planetary_system.name">Name</span></dt>
+        <dd>
+            <span>{{vm.planetary_system.name}}</span>
+        </dd>
+        <dt><span data-translate="pchauvetonherokuApp.planetary_system.star">Star</span></dt>
+        <dd>
+            <span>{{vm.planetary_system.star}}</span>
+        </dd>
+        <dt><span data-translate="pchauvetonherokuApp.planetary_system.galaxy">Galaxy</span></dt>
+        <dd>
+            <span>{{vm.planetary_system.galaxy}}</span>
+        </dd>
+        <dt><span data-translate="pchauvetonherokuApp.planetary_system.galaxy_relationship">Galaxy Relationship</span></dt>
+        <dd>
+            <a ui-sref="galaxy-detail({id:vm.planetary_system.galaxy_relationship.id})">{{vm.planetary_system.galaxy_relationship.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="planetary-system-detail.edit({id:vm.planetary_system.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
